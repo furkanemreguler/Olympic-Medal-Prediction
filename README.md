@@ -35,7 +35,7 @@ This notebook (`model.ipynb`) explores and models Olympic participation data (nu
   - **medals**: medals won that year  
   - **prev_medals**, **prev_3_medals**: medal counts in prior Games
 
----
+--- 
 
 ## ⚙️ Requirements
 
