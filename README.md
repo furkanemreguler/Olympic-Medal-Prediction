@@ -6,46 +6,101 @@ A machine-learning project that uses historical Olympic data to predict the numb
 
 ## 📋 Table of Contents
 
-- [Project Overview](#project-overview)  
-- [Data](#data)  
-- [Requirements](#requirements)  
-- [Installation](#installation)  
-- [Usage](#usage)  
-- [Project Structure](#project-structure)  
-- [Contributing](#contributing)  
-- [License](#license)
+1. [Project Overview](#project-overview)
+2. [Data](#data)
+3. [Requirements](#requirements)
+4. [Installation](#installation)
+5. [Usage](#usage)
+6. [Project Structure](#project-structure)
+7. [Contributing](#contributing)
+8. [License](#license)
 
 ---
 
-## 🏅 Project Overview
+## Project Overview
 
-This notebook (`model.ipynb`) explores and models Olympic participation data (number of athletes, previous medals, demographic features, etc.) to forecast each country’s medal count in upcoming Games.
+This project analyzes past Olympic results and country metrics (e.g., GDP, population, past performance) to build models that forecast gold, silver, and bronze medal counts for each nation in upcoming Olympic Games.
 
 ---
 
-## 📊 Data
+## Data
 
-- **`teams.csv`**  
-  - **team**: 3-letter country code (e.g. `USA`, `CHN`)  
-  - **country**: full country name  
-  - **year**: Olympic year  
-  - **events**: number of events entered  
-  - **athletes**: number of athletes sent  
-  - **age**, **height**, **weight**: average athlete demographics  
-  - **medals**: medals won that year  
-  - **prev_medals**, **prev_3_medals**: medal counts in prior Games
+- `teams.csv`: historical team performance and medal counts
+- Additional datasets (e.g., country-level economic indicators) may be merged for feature enrichment.
 
---- 
+---
 
-## ⚙️ Requirements
+## Requirements
 
-See [requirements.txt](requirements.txt) for the full list of dependencies. Key packages:
+Install the following packages:
 
-```text
-pandas
+```
 numpy
+pandas
 scikit-learn
+matplotlib
 seaborn
-python-dateutil
-pytz
-six
+```
+
+All dependencies are listed in `requirements.txt`.
+
+---
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/Olympic-Medal-Prediction.git
+   cd Olympic-Medal-Prediction
+   ```
+
+2. Create and activate a virtual environment:
+
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate      # macOS/Linux
+   .venv\Scripts\activate.bat   # Windows (cmd)
+   ```
+
+3. Install Python dependencies:
+
+   ```bash
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
+
+---
+
+## Usage
+
+1. Open `model.ipynb` in Jupyter Notebook or Jupyter Lab.
+2. Run each cell sequentially:
+   - Load and inspect the data
+   - Clean and preprocess features
+   - Train and evaluate predictive models
+   - Generate forecasts for target Olympic year
+3. Export predictions or analysis plots as needed.
+
+---
+
+## Project Structure
+
+```
+├── teams.csv          # historical data for each country
+├── model.ipynb        # Jupyter notebook with end-to-end pipeline
+├── requirements.txt   # Python dependencies
+└── README.txt         # this documentation
+```
+
+---
+
+## Contributing
+
+Contributions are welcome! Please submit issues or pull requests for enhancements, bug fixes, or new modeling approaches.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See `LICENSE` for details.
